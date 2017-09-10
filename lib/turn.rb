@@ -26,3 +26,12 @@ def position_take?(board, index)
     return false
   end
 end
+
+def move(board, index, token = 'X')
+  if (valid_move?(board,index))
+    board[index] = token
+  else
+    puts "Please enter a valid move"
+  end
+  return board
+end
