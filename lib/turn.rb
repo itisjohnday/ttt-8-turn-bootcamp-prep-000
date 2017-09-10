@@ -19,7 +19,7 @@ def valid_move?(board, index)
   end
 end
 
-def position_take?(board, index)
+def position_taken?(board, index)
   if (board[index] == 'X' || board[index] == 'O')
     return true
   else
@@ -40,10 +40,10 @@ def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
-  
+
   if (valid_move?(board,index))
     move(board,index)
-  else 
+  else
     puts "Invalid input"
     turn(board)
   end
