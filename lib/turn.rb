@@ -14,14 +14,15 @@ end
 def valid_move?(board, index)
   if (
     return false
-  else 
+  else
     return true
+  end
 end
 
 def position_take?(board, index)
   if (board[index] == 'X' || board[index] == 'O')
     return true
-  else 
+  else
     return false
   end
 end 
